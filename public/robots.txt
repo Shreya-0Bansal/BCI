@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bansalchainindustries.vercel.app/sitemap.xml
