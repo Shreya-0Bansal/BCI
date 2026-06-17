@@ -1,7 +1,6 @@
 import { ArrowRight, Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import SectionIntro from "../components/SectionIntro";
 import { company } from "../data/company";
-import { products } from "../data/products";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { buildWhatsAppUrl } from "../utils/inquiry";
 
@@ -19,7 +18,7 @@ const states = [
 export default function ContactPage() {
   useDocumentMeta(
     "Contact | Bansal Chain Industries",
-    "Contact Bansal Chain Industries at E352 Focal Point Phase 6, Ludhiana, Punjab for industrial chain and sprocket inquiries.",
+    "Contact Bansal Chain Industries at E352 Focal Point Phase 6, Ludhiana, Punjab for industrial chain, sprocket, and fastener inquiries.",
   );
 
   return (

@@ -2,7 +2,7 @@ export default function LogoMark({ compact = false }) {
   return (
     <span className={`logo-mark${compact ? " logo-mark--compact" : ""}`}>
       <img
-        src="/Logo.jpeg"
+        src="/Logo.png"
         alt="Bansal Chain Industries"
         width="56"
         height="56"

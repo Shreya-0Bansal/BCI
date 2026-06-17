@@ -17,9 +17,9 @@ const navigationItems = [
 
 const catalogItems = [
   { name: "Conveyor Chains", slug: "conveyor-chains" },
-  { name: "Roller Chains", slug: "roller-chains" },
+  { name: "Industrial Chains", slug: "industrial-chains" },
   { name: "Sprockets & Gears", slug: "gear-sprockets" },
-  { name: "Custom Solutions", slug: "industrial-chains" },
+  { name: "Fastners", slug: "fastners" },
 ];
 
 export default function SiteFooter() {

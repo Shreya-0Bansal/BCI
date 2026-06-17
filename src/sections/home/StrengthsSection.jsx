@@ -10,7 +10,7 @@ const strengths = [
 
 export default function StrengthsSection() {
   return (
-    <section className="strengths-showcase">
+    <section className="section home-section strengths-showcase">
       <div className="container strengths-showcase__grid">
         <div className="strengths-showcase__content">
           <SectionIntro

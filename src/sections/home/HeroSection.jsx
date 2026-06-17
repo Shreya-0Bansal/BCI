@@ -10,11 +10,11 @@ export default function HeroSection() {
       <div className="container hero-section__grid">
         <div>
           <p className="eyebrow">{company.tagline}</p>
-          <h1>Engineered chain systems for modern manufacturing lines.</h1>
+          <h1>Industrial chain systems for modern manufacturing lines.</h1>
           <p className="lead">
-            Bansal Chain Industries manufactures conveyor chains, roller chains,
-            bottling plant chains, sprockets, and industrial fastners with a
-            premium catalog-first presentation for B2B buyers.
+            Bansal Chain Industries manufactures conveyor chains, industrial
+            chains, bottling plant chains, sprockets, and industrial fastners
+            with a premium catalog-first presentation for B2B buyers.
           </p>
           <div className="hero-section__actions">
             <Link className="button button--solid" to="/products">

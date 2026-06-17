@@ -9,8 +9,8 @@ import { useDocumentMeta } from "../hooks/useDocumentMeta";
 
 export default function HomePage() {
   useDocumentMeta(
-    "Bansal Chain Industries | Premium Industrial Chains & Sprockets",
-    "Bansal Chain Industries manufactures conveyor chains, roller chains, bottling plant chains, sprockets, and industrial fastners.",
+    "Bansal Chain Industries | Conveyor Chains, Sprockets & Fasteners",
+    "Bansal Chain Industries manufactures conveyor chains, industrial chains, bottling plant chains, sprockets, and fasteners for industrial buyers.",
   );
 
   return (

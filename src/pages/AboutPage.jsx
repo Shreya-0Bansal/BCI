@@ -1,6 +1,3 @@
-import PageHero from "../components/PageHero";
-import { company } from "../data/company";
-import { galleryVisuals } from "../data/products";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 
 const productionSpecs = [
@@ -15,7 +12,7 @@ const productionSpecs = [
 export default function AboutPage() {
   useDocumentMeta(
     "About | Bansal Chain Industries",
-    "Technical manufacturing parameters, material capabilities, and industrial power transmission systems from BCI.",
+    "Technical manufacturing parameters, material capabilities, and industrial chain and sprocket systems from BCI.",
   );
 
   return (
@@ -68,7 +65,7 @@ export default function AboutPage() {
               <p>
                 We manufacture high-performance
                 <strong className="about-page__emphasis"> Conveyor Chains</strong>,
-                <strong className="about-page__emphasis"> Transmission Roller Chains</strong>,
+                <strong className="about-page__emphasis"> Industrial Chains</strong>,
                 and precision-engineered
                 <span className="about-page__chip about-page__chip--secondary"> Industrial Sprockets</span> designed for long operational life cycles.
               </p>

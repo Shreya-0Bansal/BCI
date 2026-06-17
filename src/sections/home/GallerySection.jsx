@@ -1,21 +1,21 @@
 import SectionIntro from "../../components/SectionIntro";
-import { galleryVisuals } from "../../data/products";
+import galleryImages from "../../data/gallery";
 
 export default function GallerySection() {
   return (
-    <section className="section section--muted">
+    <section className="section home-section gallery-section">
       <div className="container">
         <SectionIntro
           eyebrow="Gallery"
-          title="Catalogue visuals across the full product range."
-          description="The gallery now mirrors the same primary product images used in the catalogue."
+          title="Separate workshop and plant imagery for a larger visual story."
+          description="This section is intentionally independent from the product catalog, so you can add 10-15 gallery images here without changing catalog cards or product detail visuals."
           align="center"
         />
+
         <div className="gallery-grid">
-          {galleryVisuals.map((visual) => (
-            <figure className="gallery-card" key={visual.title}>
-              <img src={visual.image} alt={visual.title} loading="lazy" decoding="async" />
-              <figcaption>{visual.title}</figcaption>
+          {galleryImages.map((item) => (
+            <figure className="gallery-grid__card" key={item.title}>
+              <img src={item.image} loading="lazy" decoding="async" />
             </figure>
           ))}
         </div>

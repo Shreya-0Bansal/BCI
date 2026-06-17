@@ -1,16 +1,13 @@
 const legacyImages = {
   hero: "/machinery.jpg",
   conveyor: "/CONVEYOR_CHAIN1.jpg",
-  roller: "/RollerChain.webp",
   sprocket: "/SPROCKET.png",
   machinery: "/lpg-bottling-plant.jpg",
-  texture: "/SPROCKET2.avif",
-  fastners: "/Fastners.jpg",
+  fastners: "/Fastners.png",
   conveyorAlt: "/Conveyor_Chain.png",
 };
 
 export const productFamilies = [
-  // { slug: "roller-chains", name: "Roller Chains" },
   { slug: "conveyor-chains", name: "Conveyor Chains" },
   { slug: "industrial-chains", name: "Industrial Chains" },
   { slug: "bottling-plant-chains", name: "Bottling Plant Chains" },
@@ -23,36 +20,6 @@ function buildGallery(images) {
 }
 
 export const products = [
-  {
-    slug: "roller-chains",
-    familySlug: "roller-chains",
-    category: "Roller Chains",
-    name: "Precision Roller Chains",
-    summary:
-      "High-duty transmission chains for industrial drives, agricultural equipment, and continuous mechanical power transfer.",
-    detailTitle: "Roller chains with stable pitch control and dependable wear life.",
-    description:
-      "Designed for steady transmission efficiency, these roller chains are suitable for moderate to high-load applications where repeatable pitch accuracy and hardened wear surfaces are required.",
-    specHighlights: ["ANSI / ISO reference range", "Alloy steel options"],
-    materials: ["Carbon steel", "Alloy steel", "Nickel-plated finish on request"],
-    customization: [
-      "Duplex and triplex configurations",
-      "Corrosion-resistant surface finishes",
-      "Matched lengths for conveyor integration",
-    ],
-    sizeChart: [
-      { reference: "08B-1", pitch: '12.70 mm', width: "7.75 mm", load: "17.8 kN", material: "Carbon steel" },
-      { reference: "10B-1", pitch: '15.875 mm', width: "9.40 mm", load: "22.2 kN", material: "Alloy steel" },
-      { reference: "12B-1", pitch: '19.05 mm', width: "11.68 mm", load: "29.0 kN", material: "Alloy steel" },
-    ],
-    galleryTitles: ["Pitch accuracy", "Hardened surfaces", "Transmission layout"],
-    heroImage: legacyImages.roller,
-    gallery: buildGallery([
-      legacyImages.roller,
-      legacyImages.hero,
-      legacyImages.texture,
-    ]),
-  },
   {
     slug: "conveyor-chains",
     familySlug: "conveyor-chains",
@@ -109,7 +76,6 @@ export const products = [
     heroImage: legacyImages.hero,
     gallery: buildGallery([
       legacyImages.hero,
-      legacyImages.roller,
       legacyImages.machinery,
     ]),
   },
@@ -169,7 +135,6 @@ export const products = [
     heroImage: legacyImages.sprocket,
     gallery: buildGallery([
       legacyImages.sprocket,
-      legacyImages.roller,
       legacyImages.texture,
     ]),
   },
@@ -206,8 +171,3 @@ export const products = [
 ];
 
 export const featuredProducts = products.slice(0, 4);
-
-export const galleryVisuals = products.map((product) => ({
-  title: product.name,
-  image: product.heroImage,
-}));

@@ -10,7 +10,7 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section className="industries-marquee">
+    <section className="section home-section industries-marquee">
       <div className="container">
         <div className="industries-marquee__head">
           <p className="eyebrow">Industries Served</p>

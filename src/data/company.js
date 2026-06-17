@@ -11,5 +11,5 @@ export const company = {
     "https://www.google.com/maps?q=E352%20Focal%20Point%20Phase%206%20Ludhiana%20Punjab&z=15&output=embed",
   tagline: "Premium industrial chain manufacturing",
   description:
-    "Bansal Chain Industries presents a refined industrial catalog experience for conveyor chains, roller chains, industrial chains, bottling plant chains, gear sprockets, and industrial fastners.",
+    "Bansal Chain Industries presents a refined industrial catalog experience for conveyor chains, industrial chains, bottling plant chains, gear sprockets, and industrial fastners.",
 };

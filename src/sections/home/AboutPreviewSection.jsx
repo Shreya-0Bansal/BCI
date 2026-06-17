@@ -1,5 +1,4 @@
 import { useState } from "react";
-import SectionIntro from "../../components/SectionIntro";
 
 const principles = [
   {
@@ -23,7 +22,7 @@ export default function CompanyPrinciplesSection() {
   const [active, setActive] = useState(principles[0]);
 
   return (
-    <section className="principles">
+    <section className="section home-section principles">
       <div className="container principles__container">
 
         <div className="principles__list">
