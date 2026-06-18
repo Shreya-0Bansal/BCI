@@ -1,7 +1,7 @@
 const legacyImages = {
   industrial: "/IndustrialChain.png",
   conveyor: "/CONVEYOR_CHAIN1.png",
-  sprocket: "/SPROCKET2.avif",
+  sprocket: "/Sprocket2.png",
   machinery: "/bottling-plant.png",
   fastners: "/Fastners.png",
   conveyorAlt: "/Conveyor_Chain.png",

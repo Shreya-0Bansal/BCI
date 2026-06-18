@@ -15,7 +15,7 @@ const galleryImages = [
     image: "/5.png",
   },
   {
-    image: "/SPROCKET2.avif",
+    image: "/Sprocket2.png",
   },
   {
     image: "/6.png",

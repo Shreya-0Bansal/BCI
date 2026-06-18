@@ -1654,7 +1654,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  min-height: 190px;
+  min-height: 100px;
   padding: var(--space-4);
   border: 1px solid rgba(53, 11, 15, 0.1);
   border-radius: var(--radius-lg);
@@ -2150,21 +2150,22 @@ font-weight: 600;
 }
 .gallery-grid__card {
   overflow: hidden;
-  border: 2px solid #2f2f2f;
+  border: 1px solid #d7d7d7;
   border-radius: 14px;
-  background: #fff;
+  background: #f8f8f8;
+  transition: all 0.25s ease;
+}
+
+.gallery-grid__card:hover {
+  border-color: #c6a15b;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
 .gallery-grid__card img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-}
-
-.gallery-grid__card:hover {
-  border-color: #c6a15b;
-  box-shadow:
-    0 12px 32px rgba(0,0,0,.10);
 }
 
 /* Contact Page */
