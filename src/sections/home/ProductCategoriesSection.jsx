@@ -3,20 +3,20 @@ import SectionIntro from "../../components/SectionIntro";
 
 const categories = [
   {
-    title: "Chains",
-    desc: "Industrial power transmission chains for heavy-duty applications.",
+    title: "Conveyor Chains",
+    desc: "Heavy-duty chains for material handling and conveying systems.",
   },
   {
-    title: "Sprockets",
-    desc: "Precision-engineered sprockets for smooth mechanical performance.",
+    title: "Industrial Chains",
+    desc: "Engineered chain solutions for demanding industrial operations.",
   },
   {
-    title: "Fastners",
-    desc: "High-strength bolts, nuts, and custom fastening solutions.",
+    title: "Bottling Plant Chains",
+    desc: "Reliable chains designed for beverage and packaging lines.",
   },
   {
-    title: "Custom Engineering",
-    desc: "Tailor-made mechanical components as per drawings and specs.",
+    title: "Sprockets & Fasteners",
+    desc: "Precision drive components and industrial fastening systems.",
   },
 ];
 

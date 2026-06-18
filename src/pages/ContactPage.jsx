@@ -23,49 +23,23 @@ export default function ContactPage() {
 
   return (
     <>
-      <style>{`
-        @media (max-width: 1024px) {
-          .contact-page__grid { grid-template-columns: 1fr !important; gap: 48px !important; }
-        }
-      `}</style>
-
-      {/* IMMERSIVE COMPONENT LANDING AREA */}
-      <section className="contact-page" style={{ padding: "100px 0 96px 0", backgroundColor: "var(--color-surface)" }}>
-        <div 
-          className="container contact-page__grid"
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 24px",
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr",
-            gap: "56px",
-            alignItems: "start",
-          }}
-        >
-          {/* LEFT COLUMN: IDENTITIES & CORE CHANNELS */}
+      <section className="contact-page">
+        <div className="container contact-page__grid">
           <div>
-            <div className="contact-page__intro" style={{ marginBottom: "48px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
-                <span style={{ width: "6px", height: "6px", backgroundColor: "var(--color-primary)", borderRadius: "50%" }} />
-                <span 
-                  style={{ 
-                    fontSize: "11px", 
-                    letterSpacing: "0.2em", 
-                    textTransform: "uppercase", 
-                    fontWeight: "700", 
-                    color: "var(--color-primary)" 
-                  }}
-                >
+            <div className="contact-page__intro">
+              <div className="contact-page__eyebrow-row">
+                <span className="contact-page__dot" />
+                <span className="contact-page__eyebrow">
                   Get In Touch
                 </span>
               </div>
-              
-              <h1 style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.25rem)", fontWeight: "900", color: "var(--color-primary)", marginBottom: "24px", lineHeight: "1.15", letterSpacing: "-0.03em" }}>
-                Let's Build Something <span style={{ color: "var(--color-secondary)" }}>Stronger</span> Together
+
+              <h1 className="contact-page__title">
+                Let's Build Something <span className="contact-page__title-accent">Stronger</span>{" "}
+                Together
               </h1>
-              
-              <p style={{ fontSize: "18px", color: "#4b5563", fontWeight: "500", lineHeight: "1.6", margin: 0 }}>
+
+              <p className="contact-page__lead">
                 Whether you need custom chain solutions or bulk industrial supplies, our technical team is ready to assist you.
               </p>
             </div>
@@ -132,11 +106,9 @@ export default function ContactPage() {
               </a>
             </aside>
           </div>
-
         </div>
       </section>
 
-      {/* CORE GEO INFRASTRUCTURE MAP */}
       <section className="contact-page__map-section">
         <div className="container">
           <div className="contact-page__map-head">
@@ -156,7 +128,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* PAN-INDIA LOGISTICS COVERAGE MATRIX */}
       <section className="contact-page__states-section">
         <div className="container">
           <div className="contact-page__states-head">

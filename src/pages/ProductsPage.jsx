@@ -43,48 +43,36 @@ export default function ProductsPage() {
               Each category represents a dedicated manufacturing system designed for load-specific, industrial-grade transmission requirements.
             </p>
           </div>
-
           <div className="products-family__grid">
-            <button
-              type="button"
-              onClick={() => navigate("/products")}
-              className="products-family__card products-family__card--all"
-            >
-              <div className="products-family__overlay" />
-              <div className="products-family__content">
-                <div className="products-family__icon-box products-family__icon-box--gold">
-                  <Layers size={22} />
-                </div>
-                <h3>All Products</h3>
-                <p>Complete industrial catalog system</p>
-                <div className="products-family__line" />
-              </div>
-            </button>
+  {productFamilies.map((family) => (
+    <button
+      key={family.slug}
+      type="button"
+      className="products-family__card"
+      onClick={() => navigate(`/products/${family.slug}`)}
+    >
+      <div className="products-family__image-wrap">
+        <img
+          src={familyImages[family.slug] || products[0].heroImage}
+          alt={family.name}
+          className="products-family__image"
+        />
+      </div>
 
-            {productFamilies.map((family) => (
-              <button
-                type="button"
-                key={family.slug}
-                onClick={() => navigate(`/products/${family.slug}`)}
-                className="products-family__card"
-              >
-                <img
-                  src={familyImages[family.slug] || products[0].heroImage}
-                  alt={family.name}
-                  className="products-family__image"
-                />
-                <div className="products-family__overlay" />
-                <div className="products-family__content">
-                  <div className="products-family__icon-box">
-                    <Layers size={20} />
-                  </div>
-                  <h3>{family.name}</h3>
-                  <p>{familyDescriptions[family.slug]}</p>
-                  <div className="products-family__line" />
-                </div>
-              </button>
-            ))}
-          </div>
+  <div className="products-family__content">
+    <h3>{family.name}</h3>
+    <p>{familyDescriptions[family.slug]}</p>
+
+    <span className="products-family__link">
+      Explore Category
+    </span>
+  </div>
+</button>
+))}
+
+</div>
+
+
         </div>
       </section>
     </>

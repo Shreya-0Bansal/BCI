@@ -50,7 +50,7 @@ export default function StrengthsSection() {
               <p>Proprietorship Firm</p>
             </div>
             <img
-              src="/SPROCKET.png"
+              src="/SPROCKET2.avif"
               alt="Precision engineered components"
               className="strengths-showcase__image"
             />

@@ -17,32 +17,17 @@ export default function AboutPage() {
 
   return (
     <>
-
       <section className="about-page about-page--immersive">
         <div className="container about-page__grid">
-
-          {/* LEFT SIDE CONTENT SECTION */}
           <div className="about-page__content">
-            <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
-              
-              {/* Header Identity Core */}
+            <div className="about-page__intro-stack">
               <div>
-                <span 
-                  style={{ 
-                    fontSize: "11px", 
-                    letterSpacing: "0.2em", 
-                    textTransform: "uppercase", 
-                    fontWeight: "700", 
-                    color: "var(--color-primary)", 
-                    display: "block", 
-                    marginBottom: "16px" 
-                  }}
-                >
+                <span className="about-page__eyebrow">
                   Est. 1992 | Ludhiana, Punjab
                 </span>
-                
-                <h1 style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.25rem)", fontWeight: "900", color: "var(--color-primary)", marginBottom: "24px", lineHeight: "1.15", letterSpacing: "-0.03em" }}>
-                  Engineering <span style={{ color: "var(--color-secondary)" }}>Reliability</span> <br />
+                <h1 className="about-page__title">
+                  Engineering <span className="about-page__title-accent">Reliability</span>{" "}
+                  <br />
                   Since 1992
                 </h1>
               </div>
@@ -87,7 +72,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* RIGHT SIDE ASIDE PARAMETERS SECTION */}
           <div className="about-page__aside">
             <div className="about-page__panel">
               <div className="about-page__panel-head">
@@ -116,8 +100,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-
-        </div> {/* FIXED: Closed container about-page__grid div cleanly here */}
+        </div>
       </section>
     </>
   );

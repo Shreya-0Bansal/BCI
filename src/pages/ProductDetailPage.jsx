@@ -1,14 +1,50 @@
 import { Link, useParams } from "react-router-dom";
 import InquiryPanel from "../components/InquiryPanel";
-import PageHero from "../components/PageHero";
 import SectionIntro from "../components/SectionIntro";
 import SpecTable from "../components/SpecTable";
 import { products } from "../data/products";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 
+function isTableRow(row) {
+  return row && typeof row === "object" && !Array.isArray(row);
+}
+
+function formatSectionLabel(key) {
+  return key
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/[_-]+/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function getTableSections(product) {
+  if (!product) {
+    return [];
+  }
+
+  const entries = Object.entries(product).filter(([, value]) =>
+    Array.isArray(value) && value.some(isTableRow),
+  );
+
+  const orderedEntries = [
+    ...entries.filter(([key]) => key === "sizeChart"),
+    ...entries.filter(([key]) => key !== "sizeChart"),
+  ];
+
+  return orderedEntries.map(([key, rows]) => ({
+    key,
+    title: formatSectionLabel(key),
+    description:
+      key === "sizeChart"
+        ? "Reference sizes are inspired by common industrial chain and sprocket standards used across established brands. Final engineering can be customized."
+        : `Technical data for ${formatSectionLabel(key).toLowerCase()}.`,
+    rows,
+  }));
+}
+
 export default function ProductDetailPage() {
   const { productSlug } = useParams();
   const product = products.find((item) => item.slug === productSlug);
+  const tableSections = getTableSections(product);
 
   useDocumentMeta(
     product ? `${product.name} | Bansal Chain Industries` : "Product | Bansal Chain Industries",
@@ -33,15 +69,6 @@ export default function ProductDetailPage() {
 
   return (
     <>
-      <PageHero
-        eyebrow={product.category}
-        title={product.name}
-        description={product.summary}
-        image={product.heroImage}
-        breadcrumb={{ label: "Products", href: "/products" }}
-        variant="gradient"
-      />
-
       <section className="section">
         <div className="container detail-grid">
           <div>
@@ -75,12 +102,18 @@ export default function ProductDetailPage() {
 
       <section className="section section--muted">
         <div className="container">
-          <SectionIntro
-            eyebrow="Technical Size Chart"
-            title="Standard reference dimensions for preliminary selection."
-            description="Reference sizes are inspired by common industrial chain and sprocket standards used across established brands. Final engineering can be customized."
-          />
-          <SpecTable rows={product.sizeChart} />
+          <div className="product-detail-tables">
+            {tableSections.map((section, index) => (
+              <div key={section.key} className="product-detail-tables__item">
+                <SectionIntro
+                  eyebrow={index === 0 ? "Technical Size Chart" : "Technical Table"}
+                  title={index === 0 ? "Standard reference dimensions for preliminary selection." : section.title}
+                  description={section.description}
+                />
+                <SpecTable rows={section.rows} />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

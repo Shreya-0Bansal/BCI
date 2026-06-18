@@ -1,9 +1,11 @@
 export const company = {
   name: "Bansal Chain Industries",
-  phone: "+91 94172 71707",
-  whatsapp: "919417271707",
+
+  phone: "+91 94172 71707    |   +91 94645 39701",
+  whatsapp: "919464539701",
   email: "bansalchain1972@yahoo.com",
-  address: "E352 Focal Point Phase 6, Ludhiana, Punjab",
+
+  address: "E-352, Phase VI, Focal Point, Ludhiana, Punjab 141010, India",
   shortAddress: "Ludhiana, Punjab",
   mapUrl:
     "https://www.google.com/maps/search/?api=1&query=E352+Focal+Point+Phase+6+Ludhiana+Punjab",
