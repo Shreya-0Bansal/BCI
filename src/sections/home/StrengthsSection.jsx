@@ -10,7 +10,7 @@ const strengths = [
 
 export default function StrengthsSection() {
   return (
-    <section className="section home-section strengths-showcase">
+    <section className="section home-section home-section--deferred strengths-showcase">
       <div className="container strengths-showcase__grid">
         <div className="strengths-showcase__content">
           <SectionIntro
@@ -37,6 +37,11 @@ export default function StrengthsSection() {
               src="/machinery.jpg"
               alt="Industrial machining facility"
               className="strengths-showcase__image"
+              loading="lazy"
+              decoding="async"
+              width="960"
+              height="720"
+              fetchpriority="low"
             />
             <div className="strengths-showcase__metric">
               <h4>30+</h4>
@@ -50,9 +55,14 @@ export default function StrengthsSection() {
               <p>Proprietorship Firm</p>
             </div>
             <img
-              src="/Sprocket2.png"
+              src="/head.jpg"
               alt="Precision engineered components"
               className="strengths-showcase__image"
+              loading="lazy"
+              decoding="async"
+              width="960"
+              height="720"
+              fetchpriority="low"
             />
           </div>
         </div>

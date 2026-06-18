@@ -22,7 +22,7 @@ export default function CompanyPrinciplesSection() {
   const [active, setActive] = useState(principles[0]);
 
   return (
-    <section className="section home-section principles">
+    <section className="section home-section home-section--deferred principles">
       <div className="container principles__container">
 
         <div className="principles__list">

@@ -12,6 +12,7 @@ export default function ProductCard({ product }) {
           decoding="async"
           width="720"
           height="540"
+          fetchpriority="low"
         />
       </div>
       <div className="product-card__body">

@@ -28,7 +28,12 @@ ul {
 }
 
 .section {
-  padding: var(--space-6) 0;
+  padding: 40px 0;
+}
+
+.home-section--deferred {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
 }
 
 
@@ -1337,7 +1342,7 @@ ul {
 }
 
 .about-page {
-  padding: 96px 0;
+  padding: 80px 0;
   background: var(--color-surface);
 }
 
@@ -1440,7 +1445,7 @@ ul {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
 }
 
-.about-page__protocol h4 {
+.about-page__protocol h2 {
   margin-bottom: 16px;
   color: var(--color-primary);
   font-size: 13px;
@@ -2023,9 +2028,8 @@ font-weight: 600;
     display: flex;
   }
 
-  .hero-section,
-  .section {
-    padding: var(--space-7) 0;
+  .hero-section {
+    padding: var(--space-8) 0;
   }
 
   .page-hero {
@@ -2095,10 +2099,6 @@ font-weight: 600;
     padding: 24px;
   }
 
-  .contact-page {
-    padding: 80px 0;
-  }
-
   .contact-page__cards {
     grid-template-columns: 1fr;
   }
@@ -2150,15 +2150,25 @@ font-weight: 600;
 }
 .gallery-grid__card {
   overflow: hidden;
-  border: 1px solid #d7d7d7;
+  border: 1px solid #cfc2b8;
   border-radius: 14px;
-  background: #f8f8f8;
   transition: all 0.25s ease;
+  background: linear-gradient(
+  180deg,
+  #faf8f8 0%,
+  #f1ecec 50%,
+  #e8e1e1 100%
+);
 }
 
 .gallery-grid__card:hover {
   border-color: #c6a15b;
-  background: #ffffff;
+  background: linear-gradient(
+  180deg,
+  #faf7f7 0%,
+  #f4eeee 50%,
+  #ebe2e2 100%
+);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
@@ -2167,12 +2177,18 @@ font-weight: 600;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
 
 /* Contact Page */
 
 .contact-page {
   position: relative;
-  padding: 110px 0;
+  padding: 80px 0;
   overflow: hidden;
 }
 
@@ -2501,10 +2517,7 @@ font-weight: 600;
 ========================================================= */
 
 .contact-page__map-section {
-  padding: 100px 0;
-  background:
-    linear-gradient(180deg, #fff 0%, #faf7f3 100%);
-  border-top: 1px solid rgba(53, 11, 15, 0.05);
+  padding: 30px 0;
 }
 
 .contact-page__map-head {
@@ -2546,8 +2559,9 @@ font-weight: 600;
 ========================================================= */
 
 .contact-page__states-section {
-  padding: 100px 0 120px;
-  background: #ffffff;
+  padding: 30px 0 80px;
+  background:
+    linear-gradient(180deg, rgba(246, 243, 238, 0.95), rgba(255, 255, 255, 0.84));
 }
 
 .contact-page__states-head {

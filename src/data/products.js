@@ -4,7 +4,8 @@ const legacyImages = {
   sprocket: "/Sprocket2.png",
   machinery: "/bottling-plant.png",
   fastners: "/Fastners.png",
-  conveyorAlt: "/Conveyor_Chain.png",
+  conveyorAlt: "/IndustrialChain.png",
+  texture: "/head.jpg",
 };
 
 export const productFamilies = [
@@ -14,10 +15,6 @@ export const productFamilies = [
   { slug: "gear-sprockets", name: "Gear / Sprockets" },
   { slug: "fastners", name: "Fastners" },
 ];
-
-function buildGallery(images) {
-  return images;
-}
 
 export const products = [
   {
@@ -84,11 +81,11 @@ export const products = [
 
   galleryTitles: ["Conveyor profile", "Attachment detail", "Bulk handling geometry"],
   heroImage: legacyImages.conveyor,
-  gallery: buildGallery([
+  gallery: [
     legacyImages.conveyor,
     legacyImages.conveyorAlt,
     legacyImages.industrial,
-  ]),
+  ],
 },
  {
   slug: "industrial-chains",
@@ -133,10 +130,10 @@ export const products = [
 
   galleryTitles: ["Machine integration", "Load-bearing links", "Industrial wear profile"],
   heroImage: legacyImages.industrial,
-  gallery: buildGallery([
+  gallery: [
     legacyImages.industrial,
     legacyImages.machinery,
-  ]),
+  ],
 },
  {
   slug: "bottling-plant-chains",
@@ -180,11 +177,11 @@ export const products = [
 
   galleryTitles: ["Packaging transfer", "Washdown-ready surfaces", "Bottling line layout"],
   heroImage: legacyImages.machinery,
-  gallery: buildGallery([
+  gallery: [
     legacyImages.machinery,
     legacyImages.conveyorAlt,
     legacyImages.industrial,
-  ]),
+  ],
 },
   {
   slug: "gear-sprockets",
@@ -227,10 +224,10 @@ export const products = [
 
   galleryTitles: ["Tooth profile", "Machined bore detail", "Drive system layout"],
   heroImage: legacyImages.sprocket,
-  gallery: buildGallery([
+  gallery: [
     legacyImages.sprocket,
     legacyImages.texture,
-  ]),
+  ],
 },
   {
   slug: "fastners",
@@ -274,11 +271,11 @@ export const products = [
 
   galleryTitles: ["Fastener geometry", "Thread finish", "Assembly hardware set"],
   heroImage: legacyImages.fastners,
-  gallery: buildGallery([
+  gallery: [
     legacyImages.fastners,
     legacyImages.texture,
     legacyImages.sprocket,
-  ]),
+  ],
 }
 ];
 

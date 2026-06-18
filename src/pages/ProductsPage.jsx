@@ -29,7 +29,7 @@ export default function ProductsPage() {
 
   return (
     <>
-      <section className="section home-section products-family">
+      <section className="about-page home-section products-family">
         <div className="container">
           <div className="products-family__head">
             <div className="products-family__eyebrow-row">
@@ -56,6 +56,11 @@ export default function ProductsPage() {
           src={familyImages[family.slug] || products[0].heroImage}
           alt={family.name}
           className="products-family__image"
+          loading="lazy"
+          decoding="async"
+          width="720"
+          height="540"
+          fetchpriority="low"
         />
       </div>
 

@@ -4,7 +4,7 @@ import { buildWhatsAppUrl } from "../../utils/inquiry";
 
 export default function ContactStripSection() {
   return (
-    <section className="section home-section home-contact-strip">
+    <section className="section home-section home-section--deferred home-contact-strip">
       <div className="container contact-strip">
         <div>
           <p className="eyebrow">Contact Section</p>

@@ -57,7 +57,7 @@ export default function AboutPage() {
             </div>
 
             <div className="about-page__protocol">
-              <h4>Production Protocol</h4>
+              <h2>Production Protocol</h2>
               <ul>
                 <li>
                   Application-based material selection logic eliminates premature wear.

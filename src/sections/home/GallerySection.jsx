@@ -3,7 +3,7 @@ import galleryImages from "../../data/gallery";
 
 export default function GallerySection() {
   return (
-    <section className="section home-section gallery-section">
+    <section className="section home-section home-section--deferred gallery-section">
       <div className="container">
         <SectionIntro
           eyebrow="Gallery"
@@ -14,8 +14,15 @@ export default function GallerySection() {
 
         <div className="gallery-grid">
           {galleryImages.map((item) => (
-            <figure className="gallery-grid__card" key={item.title}>
-              <img src={item.image} loading="lazy" decoding="async" />
+            <figure className="gallery-grid__card" key={item.image}>
+              <img
+                src={item.image}
+                alt={item.alt}
+                loading="lazy"
+                decoding="async"
+        
+                fetchpriority="low"
+              />
             </figure>
           ))}
         </div>

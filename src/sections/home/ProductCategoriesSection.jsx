@@ -22,7 +22,7 @@ const categories = [
 
 export default function ProductCategoriesSection() {
   return (
-    <section className="section home-section products-family products-family--overview">
+    <section className="section home-section home-section--deferred products-family products-family--overview">
       <div className="container">
         <SectionIntro
           eyebrow="Product Categories"

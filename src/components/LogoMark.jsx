@@ -7,6 +7,7 @@ export default function LogoMark({ compact = false }) {
         width="56"
         height="56"
         loading="eager"
+        fetchpriority="high"
         decoding="async"
       />
       <span className="logo-mark__text">
