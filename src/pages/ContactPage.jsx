@@ -6,7 +6,7 @@ import { buildWhatsAppUrl } from "../utils/inquiry";
 
 const contactCards = [
   { title: "Factory Address", value: company.address, href: company.mapUrl, icon: MapPin },
-  { title: "Phone Number", value: company.phone, href: `tel:${company.phone}`, icon: Phone },
+  { title: "Phone Number", value: company.phone, href: `tel:${company.whatsapp}`, icon: Phone },
   { title: "Email Address", value: company.email, href: `mailto:${company.email}`, icon: Mail },
 ];
 
