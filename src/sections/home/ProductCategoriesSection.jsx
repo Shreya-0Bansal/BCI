@@ -1,7 +1,24 @@
 import { Link } from "react-router-dom";
 import SectionIntro from "../../components/SectionIntro";
-import { ArrowUpRight } from "lucide-react";
-import { productCategories } from "../../data/productCategories";
+
+const categories = [
+  {
+    title: "Conveyor Chains",
+    desc: "Heavy-duty chains for material handling and conveying systems.",
+  },
+  {
+    title: "Industrial Chains",
+    desc: "Engineered chain solutions for demanding industrial operations.",
+  },
+  {
+    title: "Bottling Plant Chains",
+    desc: "Reliable chains designed for beverage and packaging lines.",
+  },
+  {
+    title: "Sprockets & Fasteners",
+    desc: "Precision drive components and industrial fastening systems.",
+  },
+];
 
 export default function ProductCategoriesSection() {
   return (
@@ -15,25 +32,11 @@ export default function ProductCategoriesSection() {
         />
 
         <div className="products-family__preview-grid">
-          {productCategories.map((item, index) => (
-            <Link
-              key={item.slug}
-              className="products-family__preview-card"
-              to={`/products/${item.slug}`}
-            >
-              <div className="products-family__preview-kicker">
-                <span className="products-family__preview-index">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className="products-family__preview-label">Category</span>
-              </div>
-              <div className="products-family__preview-title">{item.name}</div>
-              <div className="products-family__preview-desc">{item.summary}</div>
-              <div className="products-family__preview-link">
-                Explore family
-                <ArrowUpRight size={16} />
-              </div>
-            </Link>
+          {categories.map((item) => (
+            <article key={item.title} className="products-family__preview-card">
+              <div className="products-family__preview-title">{item.title}</div>
+              <div className="products-family__preview-desc">{item.desc}</div>
+            </article>
           ))}
         </div>
 
