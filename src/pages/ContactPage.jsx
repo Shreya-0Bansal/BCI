@@ -1,5 +1,5 @@
 import { ArrowRight, Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import SectionIntro from "../components/SectionIntro";
+import PageIntro from "../components/PageIntro";
 import { company } from "../data/company";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { buildWhatsAppUrl } from "../utils/inquiry";
@@ -26,23 +26,12 @@ export default function ContactPage() {
       <section className="contact-page">
         <div className="container contact-page__grid">
           <div>
-            <div className="contact-page__intro">
-              <div className="contact-page__eyebrow-row">
-                <span className="contact-page__dot" />
-                <span className="contact-page__eyebrow">
-                  Get In Touch
-                </span>
-              </div>
-
-              <h1 className="contact-page__title">
-                Let's Build Something <span className="contact-page__title-accent">Stronger</span>{" "}
-                Together
-              </h1>
-
-              <p className="contact-page__lead">
-                Whether you need custom chain solutions or bulk industrial supplies, our technical team is ready to assist you.
-              </p>
-            </div>
+            <PageIntro
+              eyebrow="Get In Touch"
+              title="Let's Build Something"
+              accent="Stronger Together"
+              description="Whether you need custom chain solutions or bulk industrial supplies, our technical team is ready to assist you."
+            />
 
             <div className="contact-page__cards">
               {contactCards.map((card) => {
@@ -87,7 +76,7 @@ export default function ContactPage() {
           <div className="contact-page__aside">
             <aside className="contact-page__cta">
               <MessageCircle size={28} className="contact-page__cta-icon" />
-              <span className="contact-page__eyebrow">Quick Action</span>
+              <span className="page-intro__eyebrow">Quick Action</span>
               <h3>Need a faster response?</h3>
               <p>
                 Send chain dimensions, sprocket bore specifications, or layout fastening details directly over WhatsApp to interface straight with our technical sales division.

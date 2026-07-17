@@ -1,4 +1,5 @@
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
+import PageIntro from "../components/PageIntro";
 
 const productionSpecs = [
   { metric: "Materials Used", value: "High-grade carbon, alloy, and stainless steel" },
@@ -20,24 +21,12 @@ export default function AboutPage() {
       <section className="about-page about-page--immersive">
         <div className="container about-page__grid">
           <div className="about-page__content">
-            <div className="about-page__intro-stack">
-              <div>
-                <span className="about-page__eyebrow">
-                  Est. 1992 | Ludhiana, Punjab
-                </span>
-                <h1 className="about-page__title">
-                  Engineering <span className="about-page__title-accent">Reliability</span>{" "}
-                  <br />
-                  Since 1992
-                </h1>
-              </div>
-
-              <p className="about-page__hero-description">
-                India's leading manufacturer and supplier of heavy-duty Conveyor Chains,
-                Precision Sprockets, and industrial transmission systems engineered
-                for demanding production environments.
-              </p>
-            </div>
+            <PageIntro
+              eyebrow="Est. 1992 | Ludhiana, Punjab"
+              title="Engineering"
+              accent="Reliability Since 1992"
+              description="India's leading manufacturer and supplier of heavy-duty Conveyor Chains, Precision Sprockets, and industrial transmission systems engineered for demanding production environments."
+            />
 
             <div className="about-page__copy">
               <p>
